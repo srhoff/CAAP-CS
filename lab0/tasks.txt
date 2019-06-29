@@ -1,0 +1,8 @@
+"Task 6" 
+"First, I looked up how to edit a previously commited commit. Then I used git commit --amend to enter the message editing box. Once there I rewrote the message and used :wq to exit the editor, finishing the process" 
+"The sources I used so far (I'm going to put everything I've used for the whole lab so far) are as follows: tecmint.com (learning echo) , stackoverflow.com (learning how to use the message editor)" 
+"Task 7 begins" 
+"commit SHA: c7e86ad4f1061b0cad9f64a6c9ad26f386bc1168" 
+"commit message: Add --no-mouse option to replace FZF_MOUSE_ENABLED" 
+I went to git-scm.com where I learned about the git pickaxe (-S). Using it I was able to search the repository for commits containing "--no-mouse" 
+"To delete Mistake.txt while keeping a record of its existence I erased it from the local directory using rm, then I added,committed, and pushed the changes with the commit message "Removed Mistake.txt 
