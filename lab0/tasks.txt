@@ -6,3 +6,4 @@
 "commit message: Add --no-mouse option to replace FZF_MOUSE_ENABLED" 
 I went to git-scm.com where I learned about the git pickaxe (-S). Using it I was able to search the repository for commits containing "--no-mouse" 
 "To delete Mistake.txt while keeping a record of its existence I erased it from the local directory using rm, then I added,committed, and pushed the changes with the commit message "Removed Mistake.txt 
+"git diff allowed me to see that "the dogs have escaped the floor" was not yet committed by highlighting it in green text after the command was inputed" 
