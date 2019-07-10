@@ -4,6 +4,7 @@
 /* Last validated error free: 2/18/2018 9:27 PM */
 
 /* Cite code */
+/*Governs Title Background*/
 .title-background {
   background-color: rgba(126, 235, 190);
   width: auto;
@@ -11,26 +12,29 @@
   position: relative;
     bottom: 0px;
 }
+/*Position and Color of Title*/
 .title-text {
   position: absolute;
   z-index: 2;
   color: black;
 }
+/*Governs the CEO */
 .ceo {
   max-width: 100%;
   position: relative;
     bottom: -20px;
   border: 0;
   width: 250px;
-  height: 300px;
+  height: 330px;
   border-radius: 100px;
   z-index: 2;
 }
+/*Governs the Navigation Bar*/
 .navbarlist {
   font-size: 20px;
   background-color: #4CAF50;
   position:relative;
-    bottom: 100px;
+    bottom: 0px;
     right: 0px;
   border: 5px;
   color: white;
@@ -39,6 +43,7 @@
   float: left;
   margin-right: 20px;
 }
+/*Design of Logo*/
 .logo {
   display: block;
   margin-left: 0px;
@@ -50,15 +55,16 @@
   border: 0;
   width: 2000px;
 }
+/*Indent of Body*/
 body {
   position:relative;
-    bottom: 0px;
     margin-left: 100px;
     margin-right: 100px
 }
+/*Describes the Pretty Stuff about the CEO Description and Credentials*/
 .ceo-description {
   position: relative;
-    bottom: 0px;S
+    bottom: 0px;
   height: 130px;
   font-size: 20px;
   background-color: rgb(22, 19, 163);
@@ -72,13 +78,24 @@ body {
   color: black;
   background-color: rgb(31, 227, 139)
 }
-main {
-}
+/*Makes Link Text White and Removes Hyperlink Line*/
 a {
   color: white;
   text-decoration: none;
 }
+/*Font size and word color of footer*/
 .footer {
+  background-color: rgb(82, 131, 215);
   font-size: 15px;
   color: black;
+}
+.navbarcolor {
+  background-color: rgb(154, 156, 238);
+  color: rgb(154, 156, 238);
+  height: 55px;
+  width: 1000px;
+  z-index: 1;
+  position: relative;
+    bottom: 100px;
+  width: 100%;
 }

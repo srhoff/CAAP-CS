@@ -4,15 +4,19 @@
 /* Last validated error free: 2/18/2018 9:27 PM */
 
 /* Cite code */
+/* Makes Links white and Not Underlined*/
 a{
   color: white;
   text-decoration: none;
 }
+/* Style for Header*/
 header {
   font-size: 20px;
   color: black;
   border: 1px black;
 }
+}
+/* Governs the Jacket Picture*/
 .jacket {
   position: relative;
     bottom: -10px;
@@ -22,21 +26,25 @@ header {
   border-radius: 100px;
   z-index: 2;
 }
+/* Sale Text*/
 .sale {
   text-align: center;
   font-size: 50px;
   color: rgb(222, 34, 203)
 }
+/* Sale Button*/
 .salebutton {
   text-align: center;
   font-size: 50px;
   color: white;
   background-color: #4CAF50;
 }
+/* Font Stuff for h1*/
 h1 {
   font-size: 25px;
   color: black;
 }
+/* Logo Position/size/etc*/
 .logo {
   display: block;
   margin-left: auto;
@@ -46,16 +54,29 @@ h1 {
   border: 0;
   width: 2000px;
 }
+/* CEO Pictures*/
 .ceo {
   max-width: 100%;
   position: relative;
-    bottom: -10px;
+    bottom: 20px;
   border: 0;
-  width: 200px;
-  height: 250px;
+  width: 140px;
+  height: 170px;
   border-radius: 100px;
   z-index: 2;
 }
+/* Color Box Behind Navigation Bar*/
+.navbarcolor {
+  background-color: rgb(154, 156, 238);
+  color: rgb(154, 156, 238);
+  height: 55px;
+  width: 1000px;
+  z-index: 1;
+  position: relative;
+    bottom: 0px;
+  width: 100%;
+}
+/* Navigation Button*/
 .navbarlist {
   background-color: #4CAF50;
   border: 5px;
@@ -64,40 +85,52 @@ h1 {
   list-style: none;
   float: left;
   margin-right: 20px;
+  z-index: 3;
 }
+/* Font Controller for <p>*/
 p {
   font-size: 18px;
 }
+/* Text in footer*/
 .footer {
   font-size: 15px;
   color: black;
 }
+/* Color Box in Footer*/
+.footercolor {
+  background-color: rgb(154, 156, 238);
+  color: rgb(154, 156, 238);
+  height: 85px;
+  width: 1000px;
+  z-index: 1;
+  position: relative;
+    bottom: 30px;
+  width: 100%;
+}
+/* Parameters for CEO Hello*/
 .msg1 {
   position: relative;
     bottom:-15px;
     left:0px;
-  width: 1500px;
-  height: 80px;
   background-color: rgb(22, 19, 163) ;
   color: white;
   padding: 10px;
   border: 1px green;
   z-index: 1;
 }
+/* Parameters for CEO Message*/
 .ceo-message {
   position: relative;
     bottom:10px;
     left:0px;
   text-indent: 50px;
   background-color: rgb(31, 227, 139);
-  font: Helvetica;
   border: 1px black;
   padding: 10px;
-  width: 1500px;
-  height: 120px;
   text-align: justify;
   z-index: 1;
 }
+/* Page Margins*/
 main {
   margin-left: 100px;
   margin-right: 100px;
