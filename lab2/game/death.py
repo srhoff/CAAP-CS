@@ -8,8 +8,8 @@ class Death(object):
 	quips = ["You died.  You kinda suck at this.",
 			"Your mom would be proud...",
 			"Such a loser.",
-			"I have a small puppy that's better at this.",
-			"Better luck next time."
+			"Maybe if you got out more you might have.. you know.. got out",
+			"You lazy."
 			# raise ValueError ('todo')
 			]
 	def enter(self):
