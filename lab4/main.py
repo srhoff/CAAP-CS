@@ -4,13 +4,14 @@
 
 # Imports the turtle graphics module
 import turtle
+import sys
 
 # creates a turtle (pen) an sets the speed (where 0 is fastest and 10 is slowest)
 # The colors can be set through their names or through hexadecimal codes, use hex for accuracy
 turtle.screensize(200, 200, bg="#FFFFFF")
 myPen = turtle.Turtle()
 myPen.color("#800000")
-myPen.speed(10)
+myPen.speed(100000)
 # If you would like to slow down the animation, uncomment the next line. Higher delay, the slower it will be
 #turtle.delay(100)
 # setting out box sizes to the n sq pixels per box
@@ -108,15 +109,25 @@ def draw(pallet, pixels):
 if __name__ == '__main__':
     # sample for loading art and calling draw
     ##pallet_1, pixels_1 = load_art('art/mario.txt')
-    choice = int(input("Choose File:\n [1] Banana\n [2] Mario\n [3] Pacman Ghost\n [4] Smile:"))
+    choice = int(input("Choose File:\n [1] Banana\n [2] Mario\n [3] Pacman Ghost\n [4] Smile\n [5] Space Invader\n [6] Mushroom\n [7] Man\n [8] Pacman\n [Q] To Quit\n:"))
     if choice == 1:
             pallet_1, pixels_1 = load_art('art/banana.txt')
     if choice == 2:
             pallet_1, pixels_1 = load_art('art/mario.txt')
     if choice == 3:
-            pallet_1, pixels_1 = load_art('art/pacman.txt')
+            pallet_1, pixels_1 = load_art('art/ghost.txt')
     if choice == 4:
             pallet_1, pixels_1 = load_art('art/smile.txt')
+    if choice == 5:
+            pallet_1, pixels_1 = load_art('art/invader.txt')
+    if choice == 6:
+            pallet_1, pixels_1 = load_art('art/mushroom.txt')
+    if choice == "Q":
+            sys.exit(0)
+    if choice == 7:
+            pallet_1, pixels_1 = load_art('art/man.txt')
+    if choice == 8:
+            pallet_1, pixels_1 = load_art('art/pacman.txt')
     turtle.tracer(10)
     draw(pallet_1, pixels_1)
     # You need this to prevent the window from closing after drawing
