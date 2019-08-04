@@ -5,11 +5,12 @@ if openfile.mode == 'r':
     words = openfile.read().splitlines()
 anagram_proto = {}
 anagrams = {}
-#sets length of words = 8
-#sorts letters in word by alphabetical order
+
 for word in words:
+    #sets length of words = 8
     if len(word) >= 8:
         letters = word.lower()
+        #sorts letters in word by alphabetical order
         letters = ''.join(sorted(letters))
         if not (letters in anagram_proto):
             anagram_proto[letters] = [word]
@@ -17,9 +18,9 @@ for word in words:
             anagram_proto[letters].append(word)
     ####res = [[i for i in anagram_proto[word]] for i in anagram_proto.keys()]
 ##need assistance on doing good
-for [word] in anagram_proto.values():
-    if len([word]) > 1:
-        anagrams[letters] = [word]
+for word in anagram_proto.values():
+    if len(word) > 1:
+        anagrams[letters] = word
 print(anagrams)
 
 

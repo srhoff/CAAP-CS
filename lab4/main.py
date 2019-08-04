@@ -38,6 +38,21 @@ def box(intDim):
     #rotated 360 and moved forward 4 times
     #make box
     myPen.end_fill()
+def circle(intDim):
+    myPen.pendown()
+    myPen.begin_fill()
+    myPen.circle(intDim)
+    myPen.penup()
+    myPen.end_fill()
+def triangle(intDim):
+    myPen.begin_fill()
+    for i in range(3):
+        myPen.pendown()
+        myPen.forward(intDim)
+        myPen.right(-120)
+        myPen.penup()
+    myPen.end_fill()
+
 
 # Here is an example of how to draw a box using the box function
 # Comment these two lines out when you draw your own images
@@ -90,18 +105,24 @@ def load_art(path):
 # This function takes a pallet and pixel list (matrix) to draw the picture
 # You are to write this function
 def draw(pallet, pixels):
+    d_choice = int(input("Do you want to draw using:\n [1] Boxes\n [2] Circles\n [3] Triangles\n:"))
     for row in pixels:
         for pixel in row:
             int_pixel = int(pixel)
             box_color = pallet[int_pixel]
             myPen.color(box_color)
-            box(boxSize)
-            myPen.forward(boxSize)
-        myPen.right(90)
-        myPen.forward(boxSize)
-        myPen.right(90)
-        myPen.forward(len(row)*10)
-        myPen.right(180)
+            if d_choice == 1:
+                box(boxSize)
+            elif d_choice == 2:
+                circle(boxSize//2)
+            elif d_choice == 3:
+                triangle(boxSize)
+            myPen.forward(boxSize) #moves forward 1 pixel
+        myPen.right(90) #turns 90 to the right
+        myPen.forward(boxSize) #goes down 1 pixel
+        myPen.right(90) #Turns back to the left
+        myPen.forward(len(row)*10) #Goes to end of row
+        myPen.right(180) #Turns back
 
 
 # Should give the user a list of the possible drawing pieces you have and ask which one to draw
@@ -109,26 +130,33 @@ def draw(pallet, pixels):
 if __name__ == '__main__':
     # sample for loading art and calling draw
     ##pallet_1, pixels_1 = load_art('art/mario.txt')
-    choice = int(input("Choose File:\n [1] Banana\n [2] Mario\n [3] Pacman Ghost\n [4] Smile\n [5] Space Invader\n [6] Mushroom\n [7] Man\n [8] Pacman\n [Q] To Quit\n:"))
-    if choice == 1:
-            pallet_1, pixels_1 = load_art('art/banana.txt')
-    if choice == 2:
-            pallet_1, pixels_1 = load_art('art/mario.txt')
-    if choice == 3:
-            pallet_1, pixels_1 = load_art('art/ghost.txt')
-    if choice == 4:
-            pallet_1, pixels_1 = load_art('art/smile.txt')
-    if choice == 5:
-            pallet_1, pixels_1 = load_art('art/invader.txt')
-    if choice == 6:
-            pallet_1, pixels_1 = load_art('art/mushroom.txt')
-    if choice == "Q":
-            sys.exit(0)
-    if choice == 7:
-            pallet_1, pixels_1 = load_art('art/man.txt')
-    if choice == 8:
-            pallet_1, pixels_1 = load_art('art/pacman.txt')
-    turtle.tracer(10)
-    draw(pallet_1, pixels_1)
-    # You need this to prevent the window from closing after drawing
-    turtle.done()
+    quit = 0
+    def draw_control(quit):
+        while quit != 1:
+            choice = int(input("Choose File:\n [1] Banana\n [2] Mario\n [3] Pacman Ghost\n [4] Smile\n [5] Space Invader\n [6] Mushroom\n [7] Man\n [8] Pacman\n [9] Quit\n:"))
+            if choice == 1:
+                    pallet_1, pixels_1 = load_art('art/banana.txt')
+            elif choice == 2:
+                    pallet_1, pixels_1 = load_art('art/mario.txt')
+            elif choice == 3:
+                    pallet_1, pixels_1 = load_art('art/ghost.txt')
+            elif choice == 4:
+                    pallet_1, pixels_1 = load_art('art/smile.txt')
+            elif choice == 5:
+                    pallet_1, pixels_1 = load_art('art/invader.txt')
+            elif choice == 6:
+                    pallet_1, pixels_1 = load_art('art/mushroom.txt')
+            elif choice == 7:
+                    pallet_1, pixels_1 = load_art('art/man.txt')
+            elif choice == 8:
+                    pallet_1, pixels_1 = load_art('art/pacman.txt')
+            elif choice == 9:
+                quit = 1
+                if quit == 1:
+                    exit("You done quitted")
+
+            turtle.tracer(10)
+            draw(pallet_1, pixels_1)
+            # You need this to prevent the window from closing after drawing
+            #turtle.done()
+    draw_control(quit)
