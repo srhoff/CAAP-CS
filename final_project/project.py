@@ -16,8 +16,6 @@ for word in words:
             anagram_proto[letters] = [word]
         else:
             anagram_proto[letters].append(word)
-    ####res = [[i for i in anagram_proto[word]] for i in anagram_proto.keys()]
-##need assistance on doing good
 for word in anagram_proto.values():
     if len(word) > 1:
         anagrams[letters] = word

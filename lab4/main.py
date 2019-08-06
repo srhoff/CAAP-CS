@@ -4,7 +4,6 @@
 
 # Imports the turtle graphics module
 import turtle
-import sys
 
 # creates a turtle (pen) an sets the speed (where 0 is fastest and 10 is slowest)
 # The colors can be set through their names or through hexadecimal codes, use hex for accuracy
@@ -154,6 +153,10 @@ if __name__ == '__main__':
                 quit = 1
                 if quit == 1:
                     exit("You done quitted")
+            else:
+                # raise ValueError("Wrong Value")
+                print("Wrong Value, Enter one of the choices")
+                continue
 
             turtle.tracer(10)
             draw(pallet_1, pixels_1)
